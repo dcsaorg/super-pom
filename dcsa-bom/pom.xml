@@ -1,0 +1,56 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.dcsa</groupId>
+		<artifactId>super-pom</artifactId>
+		<version>${revision}${sha1}${changelist}</version>
+	</parent>
+
+	<name>DCSA: Bill of Materials</name>
+	<groupId>org.dcsa</groupId>
+	<artifactId>dcsa-bom</artifactId>
+	<version>${revision}${sha1}${changelist}</version>
+	<packaging>pom</packaging>
+	<description>DCSA: Bill of Materials</description>
+
+	<properties>
+		<!-- Define DCSA-BoM version-->
+		<revision>1.0</revision>
+		<sha1/>
+		<changelist>-SNAPSHOT</changelist>
+		<!-- End: Define DCSA-BoM version -->
+
+		<!-- Projects need to override these -->
+		<core.version />
+		<event-core.version />
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.dcsa</groupId>
+				<artifactId>dcsa_core</artifactId>
+				<version>${core.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.dcsa</groupId>
+				<artifactId>dcsa_event_core</artifactId>
+				<version>${event-core.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<pluginRepositories>
+		<pluginRepository>
+			<id>github</id>
+			<name>GitHub dcsaorg Apache Maven Packages</name>
+			<url>https://maven.pkg.github.com/dcsaorg/DCSA-Core</url>
+			<snapshots>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories>
+
+</project>

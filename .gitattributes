@@ -1,0 +1,5 @@
+# EOL normalization for all files detected as text (ie. eol=lf)
+* text=auto eol=lf
+
+*.md                text
+*.xml               text
