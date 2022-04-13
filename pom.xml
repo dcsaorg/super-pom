@@ -40,7 +40,6 @@
 		<mapstruct.version>1.4.2.Final</mapstruct.version>
 		<lombok-mapstruct-binding.version>0.2.0</lombok-mapstruct-binding.version>
 		<rest-assured.version>5.0.1</rest-assured.version>
-		<swagger-schema-validator.version>1.0.0</swagger-schema-validator.version>
 
 		<!-- Plugin versions -->
 		<maven-compiler-plugin.version>3.10.1</maven-compiler-plugin.version>
@@ -87,12 +86,6 @@
 				<artifactId>mapstruct</artifactId>
 				<version>${mapstruct.version}</version>
 			</dependency>
-			<dependency>
-				<groupId>com.github.bjansen</groupId>
-				<artifactId>swagger-schema-validator</artifactId>
-				<version>${swagger-schema-validator.version}</version>
-				<scope>test</scope>
-			</dependency>
 
 			<!-- Solving convergence errors -->
 			<dependency><!-- Caused by spring-boot dependencies -->
@@ -110,7 +103,7 @@
 				<artifactId>jsr305</artifactId>
 				<version>3.0.2</version>
 			</dependency>
-			<dependency><!-- Caused by swagger-schema-validator -->
+			<dependency><!-- Caused by io.rest-assured:json-schema-validator -->
 				<groupId>com.google.guava</groupId>
 				<artifactId>guava</artifactId>
 				<version>28.2-android</version>
@@ -134,32 +127,11 @@
 				<groupId>org.owasp</groupId>
 				<artifactId>dependency-check-maven</artifactId>
 			</plugin>
-		<plugin>
-			<groupId>org.codehaus.mojo</groupId>
-			<artifactId>flatten-maven-plugin</artifactId>
-			<version>${flatten-maven-plugin.version}</version>
-			<configuration>
-				<updatePomFile>true</updatePomFile>
-				<flattenMode>resolveCiFriendliesOnly</flattenMode>
-			</configuration>
-			<executions>
-				<execution>
-					<id>flatten</id>
-					<phase>process-resources</phase>
-					<goals>
-						<goal>flatten</goal>
-					</goals>
-				</execution>
-				<execution>
-					<id>flatten.clean</id>
-					<phase>clean</phase>
-					<goals>
-						<goal>clean</goal>
-					</goals>
-				</execution>
-			</executions>
-		</plugin>
-			</plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>flatten-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
 
 		<pluginManagement>
 			<plugins>
@@ -286,6 +258,31 @@
 									</requireReleaseDeps>
 								</rules>
 							</configuration>
+						</execution>
+					</executions>
+				</plugin>
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>flatten-maven-plugin</artifactId>
+					<version>${flatten-maven-plugin.version}</version>
+					<configuration>
+						<updatePomFile>true</updatePomFile>
+						<flattenMode>resolveCiFriendliesOnly</flattenMode>
+					</configuration>
+					<executions>
+						<execution>
+							<id>flatten</id>
+							<phase>process-resources</phase>
+							<goals>
+								<goal>flatten</goal>
+							</goals>
+						</execution>
+						<execution>
+							<id>flatten.clean</id>
+							<phase>clean</phase>
+							<goals>
+								<goal>clean</goal>
+							</goals>
 						</execution>
 					</executions>
 				</plugin>
