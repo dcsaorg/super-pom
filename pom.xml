@@ -42,7 +42,8 @@
 		<rest-assured.version>5.0.1</rest-assured.version>
 
 		<!-- Solving convergence errors -->
-		<jboss-logging.version>2.2.1.Final</jboss-logging.version>
+		<jboss-logging-processor.version>2.2.1.Final</jboss-logging-processor.version>
+		<jboss-logging-annotations.version>2.2.1.Final</jboss-logging-annotations.version>
 		<findbugs.version>3.0.2</findbugs.version>
 		<guava.version>28.2-android</guava.version>
 
@@ -96,12 +97,12 @@
 			<dependency><!-- Caused by spring-boot dependencies -->
 				<groupId>org.jboss.logging</groupId>
 				<artifactId>jboss-logging-processor</artifactId>
-				<version>${jboss-logging.version}</version>
+				<version>${jboss-logging-processor.version}</version>
 			</dependency>
 			<dependency><!-- Caused by spring-boot dependencies -->
 				<groupId>org.jboss.logging</groupId>
 				<artifactId>jboss-logging-annotations</artifactId>
-				<version>${jboss-logging.version}</version>
+				<version>${jboss-logging-annotations.version}</version>
 			</dependency>
 			<dependency><!-- Caused by spring-boot dependencies -->
 				<groupId>com.google.code.findbugs</groupId>
