@@ -57,6 +57,7 @@
 		<maven-enforcer-plugin.version>3.0.0</maven-enforcer-plugin.version>
 		<dependency-check-maven.version>7.0.4</dependency-check-maven.version>
 		<flatten-maven-plugin.version>1.1.0</flatten-maven-plugin.version>
+		<hibernate.jpamodelgen.version>5.6.9.Final</hibernate.jpamodelgen.version>
 	</properties>
 
 	<!-- Dependencies that all projects get -->
@@ -121,6 +122,10 @@
 				<version>${guava.version}</version>
 			</dependency>
 			<!-- End: Solving convergence errors-->
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-jpamodelgen</artifactId>
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 
@@ -182,6 +187,11 @@
 								<version>${lombok.version}</version>
 							</path>
 							<!-- other annotation processors -->
+							<path>
+								<groupId>org.hibernate</groupId>
+								<artifactId>hibernate-jpamodelgen</artifactId>
+								<version>${hibernate.jpamodelgen.version}</version>
+							</path>
 						</annotationProcessorPaths>
 						<compilerArgs>
 							<compilerArg>
