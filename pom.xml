@@ -57,7 +57,7 @@
 		<maven-enforcer-plugin.version>3.0.0</maven-enforcer-plugin.version>
 		<dependency-check-maven.version>7.0.4</dependency-check-maven.version>
 		<flatten-maven-plugin.version>1.1.0</flatten-maven-plugin.version>
-		<hibernate-jpamodelgen.version>5.6.9.Final</hibernate-jpamodelgen.version>
+		<hibernate-jpamodelgen.version>5.6.14.Final</hibernate-jpamodelgen.version>
 	</properties>
 
 	<!-- Dependencies that all projects get -->
