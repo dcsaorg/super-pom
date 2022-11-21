@@ -55,7 +55,7 @@
 		<maven-failsafe-plugin.version>2.22.2</maven-failsafe-plugin.version>
 		<maven-source-plugin.version>3.2.1</maven-source-plugin.version>
 		<maven-enforcer-plugin.version>3.0.0</maven-enforcer-plugin.version>
-		<dependency-check-maven.version>7.0.4</dependency-check-maven.version>
+		<dependency-check-maven.version>7.3.2</dependency-check-maven.version>
 		<flatten-maven-plugin.version>1.1.0</flatten-maven-plugin.version>
 		<hibernate-jpamodelgen.version>5.6.9.Final</hibernate-jpamodelgen.version>
 	</properties>
