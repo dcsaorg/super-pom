@@ -21,7 +21,7 @@
 
 	<properties>
 		<!-- Define Super-Pom version -->
-		<revision>1.4</revision>
+		<revision>1.5</revision>
 		<sha1/>
 		<changelist>-SNAPSHOT</changelist>
 		<!-- End: Define Super-Pom version -->
