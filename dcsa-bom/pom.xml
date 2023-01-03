@@ -22,8 +22,6 @@
 		<!-- End: Define DCSA-BoM version -->
 
 		<!-- Projects need to override these -->
-		<core.version />
-		<event-core.version />
 		<shared-kernel.version />
 	</properties>
 
@@ -31,18 +29,8 @@
 		<dependencies>
 			<dependency>
 				<groupId>org.dcsa</groupId>
-				<artifactId>dcsa_core</artifactId>
-				<version>${core.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.dcsa</groupId>
 				<artifactId>shared_kernel</artifactId>
 				<version>${shared-kernel.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.dcsa</groupId>
-				<artifactId>dcsa_event_core</artifactId>
-				<version>${event-core.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
