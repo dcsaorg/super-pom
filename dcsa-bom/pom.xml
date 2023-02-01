@@ -18,7 +18,7 @@
 		<!-- Define DCSA-BoM version-->
 		<revision>1.5</revision>
 		<sha1/>
-		<changelist>-SNAPSHOT</changelist>
+		<changelist>-RELEASE</changelist>
 		<!-- End: Define DCSA-BoM version -->
 
 		<!-- Projects need to override these -->
